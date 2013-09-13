@@ -25,4 +25,3 @@ How to extend flaskr
     . venv/bin/activate
     pip install Flask
     python flaskr.py &
-
