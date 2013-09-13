@@ -1,6 +1,8 @@
+Olivet College Computer Science Homepage
+========================================
 
-Description
------------
+Assignment
+----------
 
 This assignment is a list of short tasks to be completed to help you brush up your skills, and get prepared for the semester.
 
