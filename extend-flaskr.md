@@ -7,6 +7,7 @@ How to extend flaskr
 4. Create and gitignore virtual environment
 5. Install Flask
 
+
     git clone https://github.com/mitsuhiko/flask.git
     mv flask/examples/flaskr/ .
     rm -Rf flask
