@@ -30,10 +30,12 @@ Your files should end up with the following structure:
         base.html  # Example template file for a base HTML page
 ```
 
+<pre>
 ~$ mkdir my-webapp
 ~$ cd my-webapp
 ~/my-webapp$ mkdir static templates
 ~/my-webapp$ touch webapp.py static/style.css templates/base.html
+</pre>
 
 ### Step 2: Initialize virtual environment and git repo
 
@@ -41,6 +43,7 @@ After creating a virtual environment and git repo, a simple `.gitignore` file is
 created using the unix/linux command line. This can also be done by editing
 `.gitignore` with any text editor.
 
+<pre>
 ~/my-webapp$ echo "Virtual Environment"
 ~/my-webapp$ virtualenv venv
 ~/my-webapp$ . venv/bin/activate
@@ -53,25 +56,30 @@ created using the unix/linux command line. This can also be done by editing
 (venv)~/my-webapp$ cat .gitignore
 *.py[cod]
 /venv
+</pre>
 
 ### Step 3: Make web app Heroku-aware
 
 A simple `Procfile` file is created using the unix/linux command line. This can
 also be done by editing `Procfile` with any text editor.
 
+<pre>
 (venv)~/my-webapp$ heroku login
 username:
 password:
 (venv)~/my-webapp$ heroku create my-webapp
 (venv)~/my-webapp$ echo "web: gunicorn webapp:app" > Procfile
 (venv)~/my-webapp$ pip freeze > requirements.txt
+</pre>
 
 ### Step 4: Make web app Github-aware (optional)
 
 The remote repo must be created at Github through the web interface before this
 will work.
 
+<pre>
 (venv)~/my-webapp$ git remote add origin git@github.com:username/my-webapp.git
+</pre>
 
 ### Step 5: Edit `webapp.py` to add python code
 
@@ -93,6 +101,7 @@ if __name__ == '__main__':
 
 ### Step 6: Deploy web app to Heroku and/or Github
 
+<pre>
 (venv)~/my-webapp$ echo "Update local repo"
 (venv)~/my-webapp$ git add .
 (venv)~/my-webapp$ git commit -m 'Intial commit.'
@@ -100,3 +109,4 @@ if __name__ == '__main__':
 (venv)~/my-webapp$ git push heroku master
 
 (venv)~/my-webapp$ git push origin master
+</pre>
